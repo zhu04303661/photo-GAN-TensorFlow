@@ -589,7 +589,7 @@ def export(a):
 
     return
 
-def train(a, max_steps,model,sv,sess,saver,examples):
+def train(a, max_steps,model,sv,sess,saver,examples,display_fetches):
     start = time.time()
 
     for step in range(max_steps):
@@ -805,7 +805,7 @@ def main():
             print("rate", (time.time() - start) / max_steps)
         else:
             # training
-            train(a, max_steps,model,sv,sess,saver,examples)
+            train(a, max_steps,model,sv,sess,saver,examples,display_fetches)
 
 
 main()
